@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<link rel="StyleSheet" href="css/style.css"/>
+<head>
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["firstname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+</head>
+<body>
+
+<h2>Customer Information</h2>
+<p>Please input your first and last name into the fields below</p>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" >
+  <fieldset>
+    <legend>Enter Here: </legend>
+	<br>
+    First name:<br>
+    <input type="text" name="firstname">
+    <br><br>
+    Last name:<br>
+    <input type="text" name="lastname">
+    <br><br>
+	Email:<br>
+    <input type="email" name="email">
+    <br><br>
+    <input type="submit" value="Submit">
+	 <input type="reset">
+  </fieldset>
+</form>
+
+</body>
+</html>
